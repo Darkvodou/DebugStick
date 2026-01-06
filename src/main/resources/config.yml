@@ -54,7 +54,10 @@ Blacklist_block:
   - sculk_shrieker
   - sea_pickle
   - grass_block
+  - podzol
   - water_cauldron
+  - wildflowers
+  - dried_ghast
 
 # List of block tags that the player will not be able to interact with
 # Список тегов блоков с которыми игрок не сможет взаимодействовать

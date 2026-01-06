@@ -14,6 +14,7 @@ import org.ferrum.debugStick.DebugStick;
 import org.ferrum.debugStick.utils.ConfigManager;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class DebugStickListener implements Listener {
 
@@ -22,8 +23,8 @@ public class DebugStickListener implements Listener {
         this.plugin = plugin;
     }
 
-    public static ArrayList<String> BlackList = new ArrayList<>();
-    public static ArrayList<String> PreventWaterInWorld = new ArrayList<>();
+    public static List<String> BlackList = new ArrayList<>();
+    public static List<String> PreventWaterInWorld = new ArrayList<>();
 
     public static Boolean BypassInCreative;
     public static Boolean sendMessage;
