@@ -1,8 +1,8 @@
 package org.ferrum.debugStick.listeners;
 
 
-import net.md_5.bungee.api.chat.BaseComponent;
-import net.md_5.bungee.api.chat.TextComponent;
+import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
 import org.bukkit.*;
 import org.bukkit.block.Block;
 import org.bukkit.block.data.Waterlogged;
@@ -42,7 +42,7 @@ public class DebugStickListener implements Listener {
             if (BlackList.contains(event.getBlock().getType().name())) {
                 event.setCancelled(true);
                 if (sendMessage) {
-                    BaseComponent message = new TextComponent(ConfigManager.getStringByKey("Interaction_cancellation_messages.messageBlock",player));
+                    Component message = LegacyComponentSerializer.legacyAmpersand().deserialize(ConfigManager.getStringByKey("Interaction_cancellation_messages.messageBlock",player));
                     if (isActionbar) {
                         player.sendActionBar(message);
                     } else {
@@ -52,7 +52,7 @@ public class DebugStickListener implements Listener {
             } else if (PreventWaterInWorld.contains(world_name) && isWaterlogged(block)) {
                 event.setCancelled(true);
                 if (sendMessage) {
-                    BaseComponent message = new TextComponent(ConfigManager.getStringByKey("Interaction_cancellation_messages.messageState",player));
+                    Component message = LegacyComponentSerializer.legacyAmpersand().deserialize(ConfigManager.getStringByKey("Interaction_cancellation_messages.messageState",player));
                     if (isActionbar) {
                         player.sendActionBar(message);
                     } else {

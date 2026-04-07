@@ -10,7 +10,7 @@ import org.ferrum.debugStick.DebugStick;
 import java.util.HashMap;
 
 public class CreateCraft {
-    public static void addRecipeDebugStick(DebugStick plugin, String[] craftShape, HashMap<Character, Material> ingredientList, Integer craft_size) {
+    public static void addRecipeDebugStick(DebugStick plugin, String[] craftShape, HashMap<Character, Material> ingredientList, int craft_size) {
 
         ItemStack result = new ItemStack(Material.DEBUG_STICK);
         NamespacedKey key = new NamespacedKey(plugin, "debug_stick");

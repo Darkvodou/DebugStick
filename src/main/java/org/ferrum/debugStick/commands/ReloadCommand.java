@@ -1,6 +1,7 @@
 package org.ferrum.debugStick.commands;
 
-import org.bukkit.ChatColor;
+import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.format.NamedTextColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -14,14 +15,14 @@ import java.util.List;
 public class ReloadCommand implements CommandExecutor, TabCompleter {
 
     @Override
-    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+    public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, String[] args) {
         if (args.length > 0) {
             if (args[0].equals("reload")) {
                 if (ConfigManager.loadConfig()) {
-                    sender.sendMessage(ChatColor.GREEN + "DebugStick successfully reloaded");
+                    sender.sendMessage(Component.text("DebugStick successfully reloaded", NamedTextColor.GREEN));
                     return true;
                 }
-                sender.sendMessage(ChatColor.RED + "DebugStick config error, see console");
+                sender.sendMessage(Component.text("DebugStick config error, see console", NamedTextColor.DARK_RED));
                 return true;
             } else {
                 sender.sendMessage(command.getUsage());
