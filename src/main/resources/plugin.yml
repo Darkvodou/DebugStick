@@ -1,5 +1,5 @@
 name: DebugStick
-version: '1.0'
+version: '1.2'
 main: org.ferrum.debugStick.DebugStick
 folia-supported: true
 load: STARTUP

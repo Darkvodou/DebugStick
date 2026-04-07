@@ -6,13 +6,13 @@
 
     <groupId>org.ferrum</groupId>
     <artifactId>DebugStick</artifactId>
-    <version>1.1</version>
+    <version>1.2</version>
     <packaging>jar</packaging>
 
     <name>DebugStick</name>
 
     <properties>
-        <java.version>16</java.version>
+        <java.version>21</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -68,6 +68,7 @@
             <version>2.11.6</version>
             <scope>provided</scope>
         </dependency>
+        <!--suppress VulnerableLibrariesLocal -->
         <dependency>
             <groupId>io.papermc.paper</groupId>
             <artifactId>paper-api</artifactId>
