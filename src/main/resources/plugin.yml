@@ -1,5 +1,6 @@
 name: ${project.artifactId}
 version: ${project.version}
+api-version: 1.21
 main: org.ferrum.debugStick.DebugStick
 folia-supported: true
 load: STARTUP
