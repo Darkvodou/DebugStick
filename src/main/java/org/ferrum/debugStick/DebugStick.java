@@ -17,7 +17,7 @@ public final class DebugStick extends JavaPlugin {
         ConfigManager.plugin = this;
         if(!ConfigManager.loadConfig()) {
             getLogger().severe("An error occurred while starting the plugin");
-            getPluginLoader().disablePlugin(this);
+            getServer().getPluginManager().disablePlugin(this);
             return;
         }
 
